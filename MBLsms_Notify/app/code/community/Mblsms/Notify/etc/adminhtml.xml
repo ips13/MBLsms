@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <!--
+        This item will be created in the Admin menu under CMS
+		- Layout file in mblsms/notify.xml inside adminhtml designs
+        -->
+        <cms>
+            <children>
+                <!-- Here, I like to use the namespacename_modulename_controllername naming convention -->
+                <mblsms_notify_template translate="title" module="mblsms_notify">
+                    <!-- This is how the menu text will be displayed -->
+                    <title>MBLSMS Template</title>
+					<sort_order>100</sort_order>
+                    <!-- URL for menu item and hit to controller -->
+                    <action>adminhtml/mblsmstemplate</action>
+                </mblsms_notify_template>
+            </children>
+        </cms>
+    </menu>
+     
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <!-- Same as above, but instead of referencing the config/menu node, you reference the acl/resources node of adminhtml.xml -->
+                    <cms>
+                        <children>
+                            <!-- Keep the same naming convention as above -->
+                            <mblsms_notify_template>
+                                <!-- This is how the ACL text will be displayed on System > Permissions > Roles > Role > Role Resources -->
+                                <title>MBLSMS Template</title>
+                            </mblsms_notify_template>
+                        </children>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

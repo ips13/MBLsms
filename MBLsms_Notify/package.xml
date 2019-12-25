@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>MBLsms_Notify</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>MBLSMS Notify extension.</summary>
+    <description>MBLSMS extension to send message after order placed or status changed</description>
+    <notes>MBLSMS extension to send message after order placed or status changed</notes>
+    <authors><author><name>Deftsoft</name><user>Deftsoft</user><email>contact@deftsoft.com</email></author></authors>
+    <date>2018-03-30</date>
+    <time>16:18:14</time>
+    <contents><target name="magecommunity"><dir name="Mblsms"><dir name="Notify"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><file name="Info.php" hash="1c1faccb348fd9ac40dc0119fed7b402"/></dir></dir><dir name="Template"><dir name="Edit"><file name="Form.php" hash="607874d39594d8b4c1acf24eb25db653"/></dir><file name="Edit.php" hash="002e7c8cd21769b60fde98efff7eb6a8"/><file name="Grid.php" hash="2b73025da9535479cbe0641ae4c51ab1"/></dir><file name="Template.php" hash="67a29d3b57c177fb5acd5d0412a1361a"/></dir></dir><dir name="Helper"><file name="Data.php" hash="015ecf23ece93216c3c48500107e6ab3"/></dir><dir name="Model"><file name="Observer.php" hash="03d779a183b243175d006c0130bd842e"/><dir name="Resource"><dir name="Template"><file name="Collection.php" hash="ae8ff06ed835ce4f041826739607c2f3"/></dir><file name="Template.php" hash="a97aa3b545df1f2f58b5a9b58bcda7e6"/></dir><file name="Template.php" hash="7473ddc21862b41d17e2dafff0fd1bfd"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="MblsmstemplateController.php" hash="9e63a8ce94c07f1ce1397bce4bccbaa7"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="7378ab6a02aaaad2b1129db94a4f33bb"/><file name="config.xml" hash="1489083c3d62dfc411297404e88046db"/><file name="system.xml" hash="976dbfc722a4ab61581ad1e6bff76353"/></dir><dir name="sql"><dir name="mblsms_notify_setup"><file name="data-install-1.0.0.php" hash="e9165c3c56d67dad6eaba85d6bea1fd5"/><file name="mysql4-install-1.0.0.php" hash="f30f2785b0505669c0855c661ab9f4f6"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mblsms_Notify.xml" hash="70db682d6dcb44013dfe696421964349"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><dir name="mblsms"><file name="notify.xml" hash="92b2e63910928e7983f6c235b2dc84af"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>7.1.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0</min><max>1.9</max></package></required></dependencies>
+</package>

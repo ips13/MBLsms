@@ -1,0 +1,95 @@
+<_>
+   <form_key>ca92xXDoDFOnhemE</form_key>
+   <name>MBLsms_Notify</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+   </version_ids>
+   <summary>MBLSMS Notify extension.</summary>
+   <description>MBLSMS extension to send message after order placed or status changed</description>
+   <license>OSL v3.0</license>
+   <license_uri/>
+   <version>1.0.0</version>
+   <stability>stable</stability>
+   <notes>MBLSMS extension to send message after order placed or status changed</notes>
+   <authors>
+      <name>
+         <name>Deftsoft</name>
+      </name>
+      <user>
+         <user>Deftsoft</user>
+      </user>
+      <email>
+         <email>contact@deftsoft.com</email>
+      </email>
+   </authors>
+   <depends_php_min>5.1.0</depends_php_min>
+   <depends_php_max>7.1.0</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+            <name>Mage_Core_Modules</name>
+         </name>
+         <channel>
+            <channel/>
+            <channel>community</channel>
+         </channel>
+         <min>
+            <min/>
+            <min>1.6.0</min>
+         </min>
+         <max>
+            <max/>
+            <max>1.9</max>
+         </max>
+         <files>
+            <files>        </files>
+            <files>        </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>magecommunity</target>
+         <target>mageetc</target>
+         <target>magedesign</target>
+      </target>
+      <path>
+         <path/>
+         <path>Mblsms</path>
+         <path>modules/Mblsms_Notify.xml</path>
+         <path>adminhtml/default/default/layout/mblsms</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>dir</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

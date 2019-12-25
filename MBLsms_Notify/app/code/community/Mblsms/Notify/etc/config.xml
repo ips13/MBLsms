@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mblsms_Notify>
+            <version>1.0.0</version>
+        </Mblsms_Notify>
+    </modules>
+     
+    <global>
+        <helpers>
+            <mblsms_notify>
+                <!-- This is where we define our helper directory -->
+                <class>Mblsms_Notify_Helper</class>
+            </mblsms_notify>
+        </helpers>
+                    
+        <blocks>
+            <mblsms_notify>
+                <!-- Set a block definition and lookup directory -->
+                <class>Mblsms_Notify_Block</class>
+            </mblsms_notify>
+        </blocks>
+         
+        <models>
+            <mblsms_notify>
+                <!-- This is where we define our model directory -->
+                <class>Mblsms_Notify_Model</class>
+                <!-- Define a resource to create a custom table -->
+                <resourceModel>mblsms_notify_resource</resourceModel>
+            </mblsms_notify>
+             
+            <!-- Here's our resource model we'll use to create a database table -->
+            <mblsms_notify_resource>
+                <class>Mblsms_Notify_Model_Resource</class>
+                <entities>
+                    <!-- Let's define our table, we'll call it with the template name, but the real table is mblsms_notify_template -->
+                    <!-- After we define our entity, we can call it with our model by calling mblsms_notify/template -->
+                    <template>
+                        <table>mblsms_notify_template</table>
+                    </template>
+                </entities>
+            </mblsms_notify_resource>
+        </models>
+         
+        <!-- And finally we define our resource setup script -->
+        <resources>
+            <mblsms_notify_setup>
+                <setup>
+                    <module>Mblsms_Notify</module>
+                </setup>
+            </mblsms_notify_setup>
+        </resources>
+		<events>
+            <sales_order_save_after>
+                <observers>
+                    <Mblsms_Notify_observer>
+                        <type>singleton</type>
+                        <class>Mblsms_Notify_Model_Observer</class>
+                        <method>checkOrderStatus</method>
+                    </Mblsms_Notify_observer>
+                </observers>
+            </sales_order_save_after>
+        </events>
+    </global>
+     
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <!-- This is how we load our Adminhtml controllers -->
+                    <modules>
+                        <Mblsms_Notify before="Mage_Adminhtml">Mblsms_Notify_Adminhtml</Mblsms_Notify>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+     
+    <adminhtml>
+        <layout>
+            <updates>
+                <mblsms_notify>
+                    <!--
+					Designing layout file
+                    app/design/adminhtml/default/default root folder
+                    -->
+                    <file>mblsms/notify.xml</file>
+                </mblsms_notify>
+            </updates>
+        </layout>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<mblsms>
+											<title>MBLSMS - All</title>
+										</mblsms>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+</config>

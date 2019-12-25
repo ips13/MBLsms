@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <mblsms translate="label" module="mblsms_notify">
+            <label>MBLSMS settings</label>
+            <sort_order>100</sort_order>
+        </mblsms>
+    </tabs>
+    <sections>
+        <mblsms translate="label" module="mblsms_notify">
+            <label>Options</label>
+            <tab>mblsms</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <mblsms_config translate="label" module="mblsms_notify">
+                    <label>MBLSMS Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+ 
+                    <fields>
+						<info translate="label">
+							<frontend_model>mblsms_notify/adminhtml_system_config_info</frontend_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</info>
+						<sendfrom translate="label">
+                            <label>Send From</label>
+                            <comment>Message Send from.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sendfrom>
+						<mobile_code translate="label">
+                            <label>Mobile Code</label>
+                            <comment>Mobile country code.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mobile_code>
+                        <auth_token translate="label">
+                            <label>SMS Auth Token</label>
+                            <comment>Autorization token from MBLSMS</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </auth_token>
+                    </fields>
+                </mblsms_config>
+            </groups>
+        </mblsms>
+    </sections>
+</config>
